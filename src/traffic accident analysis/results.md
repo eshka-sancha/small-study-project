@@ -25,6 +25,8 @@
 
 <img width="1356" height="409" alt="Снимок экрана 2026-05-15 174651" src="https://github.com/user-attachments/assets/12d172f9-c354-4222-aca1-e38778c9b18e" />
 <img width="1993" height="748" alt="Снимок экрана 2026-05-15 125731" src="https://github.com/user-attachments/assets/60f01ed6-6653-4551-92c3-fe05ce09959f" />
+<img width="1900" height="398" alt="image" src="https://github.com/user-attachments/assets/7011c9d9-b20d-49aa-82d7-1e3df2db00c5" />
+
 
 
 
