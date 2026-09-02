@@ -8,27 +8,54 @@
 
 3. Какие типы ДТП и причины ДТП наиболее опасны?
 
-
 <h2>Подготовка табличных данных</h2>
 
-1. Создадим датасет ДТП с необходимыми файлами.
+1. Создадим датасет ДТП с необходимыми файлами. В файле dtp201804-1.csv содержатся данные об авариях. В файле Regions.csv содержатся всего два столбца - название региона (Регион ДТП) и точки, обозначающие границы региона на карте (Полигон). Настроим связи между двумя файлами так, чтобы поля reg_name и Регион ДТП были связаны друг с другом.
+
+ <img width="1241" height="609" alt="image" src="https://github.com/user-attachments/assets/a283bde0-fe16-47b3-bcf5-23c9234a616c" />
+
+2. Заранее для удобства переименуем все поля и для полей 16-19 поставим тип агрегации "сумма", чтобы при отображении данных из этих полей по какой-то конкретной области, они были представлены в виде суммы по данной области.
+
+<img width="1947" height="1013" alt="image" src="https://github.com/user-attachments/assets/c6edead0-c36d-4200-8c50-88d570a07879" />
 
 3.  Отключим поля crash_date и crash_time, так как сейчас они показывают данные по отдельности. Создадим вместо этих двух полей новое поле с объединенными данными о дате и времени происшествия.
    
-   <img width="1549" height="791" alt="Снимок экрана 2026-05-15 121106" src="https://github.com/user-attachments/assets/8febe907-1ce7-4a47-8274-06bba99a69a3" />
+<img width="2046" height="489" alt="image" src="https://github.com/user-attachments/assets/23f88095-0b8f-4808-b253-9d7e4fe30fe4" />
 
 4. Аналогично создаем поля "Кол-во ДТП" (суммирует все записи о ДТП в конкретной области), "Геоточка" с типом данных "геоточка" (хранит в себе точку на карте в виде широты и долготы), и "Смертность в ДТП" (коэффициент смертности). Реализация каждого поля показана ниже.
 
-<img width="1356" height="409" alt="Снимок экрана 2026-05-15 174651" src="https://github.com/user-attachments/assets/12d172f9-c354-4222-aca1-e38778c9b18e" />
-<img width="1993" height="748" alt="Снимок экрана 2026-05-15 125731" src="https://github.com/user-attachments/assets/60f01ed6-6653-4551-92c3-fe05ce09959f" />
-<img width="1900" height="398" alt="image" src="https://github.com/user-attachments/assets/7011c9d9-b20d-49aa-82d7-1e3df2db00c5" />
+<img width="2031" height="431" alt="image" src="https://github.com/user-attachments/assets/4d208ea4-eddf-4223-aadf-57b7a41ccdae" />
+<img width="2050" height="518" alt="image" src="https://github.com/user-attachments/assets/8cb87034-696b-47f6-a4d0-2c6a22f6ff49" />
+<img width="2046" height="333" alt="image" src="https://github.com/user-attachments/assets/1217ad4f-71e2-469b-9fe7-84bbbf858b63" />
 
-После выполнения всех шагов получаем следующие поля измерений и поля
 
-<img width="2411" height="1153" alt="image" src="https://github.com/user-attachments/assets/e353e455-f13f-4003-82ca-63ab216cf065" />
-<img width="2427" height="668" alt="image" src="https://github.com/user-attachments/assets/46170ea9-65c6-4a8a-8472-03963c88eb3a" />
+<h2>Создание чартов</h2>
 
-<h2>Решение первой задачи "В каких регионах РФ самая высокая смертность в ДТП"</h2>
+1. Создадим чарт для отображения кол-ва ДТП и средней смертности в ДТП по регионам. Для удобства данные отсортируем по убыванию.
+
+<img width="1904" height="1207" alt="image" src="https://github.com/user-attachments/assets/02a06a4e-9a2a-4270-a080-3372e249ec4b" />
+<img width="1909" height="1232" alt="image" src="https://github.com/user-attachments/assets/c55e54a6-2f28-479b-8dd6-7c42dfdb230b" />
+
+2. Создадим карту плотности аварий. Для этого выберем тип чарта "карта" и нанесем на него точки (поле место аварии) и отобразим их как геоточки на тепловой карте.
+
+<img width="1909" height="1242" alt="image" src="https://github.com/user-attachments/assets/de1a19b4-4dd2-4531-bb73-63c294c8c2c5" />
+
+3. Создадим карту с полигонами. На ней будут отображаться данные аварий по отдельным регионам. Для этого выберем чарт "карта" и в поле "точки" добавим поле Полигоны с данными о границах областей. Выберем для них тип "геополигоны". В полу "тултипы" занесем все данные, которые мы хотим видеть по авариям в каждой области. Выберем все поля с типом агрегации "сумма" и также поля "кол-во ДТП", "смертность в ДТП" и "название региона". Обозначим цветом кол-во аварий - чем темнее область, тем больше в ней аварий. Карта будет отображать регионы с большим кол-вом ДТП. Аналогичную карту создадим для отображения регионов с большей смертностью в ДТП.
+
+<img width="1908" height="1262" alt="image" src="https://github.com/user-attachments/assets/cf3ba226-2076-42a2-a5fb-465c580159af" />
+<img width="1922" height="1243" alt="image" src="https://github.com/user-attachments/assets/0b640e8d-29ed-415a-ab96-8d46a6a1c74d" />
+
+4. Создадим чарты, отображающие кол-во аварий и смертность в них в различных временных промежутках. Создадим 3 чарта. По оси Х отложим данные о дате и времени, по У и У2 соответственно данные о кол-ве аварий и коэффициенте смертности. Для каждого из 3-ех чартов выберем интервал времени - сутки, неделя и год.
+
+<img width="1909" height="1242" alt="image" src="https://github.com/user-attachments/assets/5e3fead7-e444-4e57-81e3-6b9d659f797c" />
+<img width="1912" height="1224" alt="image" src="https://github.com/user-attachments/assets/fe209bf6-1350-4f5e-b51d-896c6c7dcd35" />
+<img width="1924" height="1246" alt="image" src="https://github.com/user-attachments/assets/f2f6c5cc-2a5a-4113-a098-be3017dbd6e8" />
+
+5. Создадим 2 чарта о кол-ве ДТП в зависимости от причины и аналогичный график смертности.
+
+<img width="1905" height="1250" alt="image" src="https://github.com/user-attachments/assets/7534a3bb-adc0-4cb7-b8c3-af01de5514e8" />
+<img width="1900" height="1170" alt="image" src="https://github.com/user-attachments/assets/918bbfc3-50ef-4bb5-876a-1e9495ca632b" />
+
 
 1. Для решения поставленной задачи необходимо построить график зависимости смертности от региона, в котором произошло ДТП. Получаем следующий график
 
