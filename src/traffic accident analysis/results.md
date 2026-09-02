@@ -53,20 +53,34 @@
 
 5. Создадим 2 чарта о кол-ве ДТП в зависимости от причины и аналогичный график смертности.
 
-<img width="1905" height="1250" alt="image" src="https://github.com/user-attachments/assets/7534a3bb-adc0-4cb7-b8c3-af01de5514e8" />
-<img width="1900" height="1170" alt="image" src="https://github.com/user-attachments/assets/918bbfc3-50ef-4bb5-876a-1e9495ca632b" />
+<img width="1919" height="1245" alt="image" src="https://github.com/user-attachments/assets/f208785f-8c27-4977-b2c1-56d5f830b793" />
+<img width="1911" height="1094" alt="image" src="https://github.com/user-attachments/assets/4ac15081-4d66-4363-ae70-9c8ad4c5b243" />
 
 6. Все созданные чарты разместим на одном дашборде. Добавим необходимые селекторы. У чартов "кол-во ДТП по регионам" и "смертность по регионам" отключим связи "название региона" и "название дороги", чтобы при выборе данных через селектор не менялись общие данные по регионам. Аналогично у чартов "наиболее опасные ДТП" и "наиболее смертельные ДТП" отключим  связь "причина ДТП", чтобы не отображать только одну причину на графике. Получаем такой дашборд.
 
- <img width="2408" height="1169" alt="image" src="https://github.com/user-attachments/assets/17344279-2e49-49a9-9fce-e8b1386ca6bb" />
- <img width="2389" height="1288" alt="image" src="https://github.com/user-attachments/assets/e6f92f7c-4837-4c16-9b11-7bef2ef73f52" />
+<img width="2440" height="1238" alt="image" src="https://github.com/user-attachments/assets/9fced126-ea9b-4e55-ac70-40b039781429" />
+<img width="1711" height="968" alt="image" src="https://github.com/user-attachments/assets/00b061d0-b5a0-4b55-a9e5-62f69b11c9e5" />
 
 
 <h2>Решение 1-ой задачи</h2>
 
-1. На дашборде посмотрим наибольшую смертность можно увидеть на карте полигонов и на чарте "средняя смертность по регионам". Она составляет 1.99 для Республики Ингушетия
+1. На дашборде наибольшую смертность можно увидеть на карте полигонов и на чарте "средняя смертность по регионам". Она составляет 1.99 для Республики Ингушетия
 
- ![Uploading image.png…]()
+<img width="1864" height="796" alt="image" src="https://github.com/user-attachments/assets/4f347cfa-95c7-46ec-978f-125b52d37547" />
+<img width="1231" height="724" alt="image" src="https://github.com/user-attachments/assets/b31e25eb-8369-4061-8124-272b920b0734" />
+
+2. 2-оя и 3-я по смертности в ДТП области - Республика Тыва и Республика Калмыкия со значениями смертности 1.94 и 1.87 соответственно
+ 
+<img width="1794" height="330" alt="image" src="https://github.com/user-attachments/assets/ea04a218-9253-4b8c-a1ce-3204ba7f7103" />
+<img width="1838" height="284" alt="image" src="https://github.com/user-attachments/assets/e00ee1f9-007e-4d36-bdab-e773eec06fc9" />
+
+3. При помощи селектора "Название региона" выберем Республику Ингушетия. На чартах дашборда можем увидеть информацию по авариям в этом регионе. Время наибольшего числа аварий приходится на вечер, пик - 18:00. На неделе большинство аварий случается в среду, наибольшую смертность имеют аварии, случившиеся в пятницу. Также видим, что в течение года пик аварий приходится на начало лета (июнь). Минимум - в августе. В осенний период кол-во аварий в месяц примерно одинаково (10 в сентябре и октябре и 11 в ноябре).
+    
+
+<img width="2464" height="1162" alt="image" src="https://github.com/user-attachments/assets/d554b07b-487e-4640-90fe-2fedf1c59c5c" />
+<img width="1323" height="448" alt="image" src="https://github.com/user-attachments/assets/d82c06fb-90cd-4723-9577-36b9e74f339a" />
+<img width="1326" height="432" alt="image" src="https://github.com/user-attachments/assets/986a13f9-a77c-4b13-aeb5-10d4da8bd08d" />
+
 
 
 <h3>Можем сделать промежуточный вывод</h3>
