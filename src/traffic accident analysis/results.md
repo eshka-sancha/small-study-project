@@ -51,10 +51,10 @@
 <img width="1912" height="1224" alt="image" src="https://github.com/user-attachments/assets/fe209bf6-1350-4f5e-b51d-896c6c7dcd35" />
 <img width="1924" height="1246" alt="image" src="https://github.com/user-attachments/assets/f2f6c5cc-2a5a-4113-a098-be3017dbd6e8" />
 
-5. Создадим 2 чарта о кол-ве ДТП в зависимости от причины и аналогичный график смертности.
+5. Создадим 2 чарта о кол-ве ДТП в зависимости от типа аварии и аналогичный график смертности.
 
-<img width="1919" height="1245" alt="image" src="https://github.com/user-attachments/assets/f208785f-8c27-4977-b2c1-56d5f830b793" />
-<img width="1911" height="1094" alt="image" src="https://github.com/user-attachments/assets/4ac15081-4d66-4363-ae70-9c8ad4c5b243" />
+<img width="2038" height="1258" alt="image" src="https://github.com/user-attachments/assets/c8f8adbf-d4a2-43b4-8284-24f01c141fbf" />
+<img width="2064" height="1244" alt="image" src="https://github.com/user-attachments/assets/ff24fca3-29bf-4069-b814-d369aebfa848" />
 
 6. Все созданные чарты разместим на одном дашборде. Добавим необходимые селекторы. У чартов "кол-во ДТП по регионам" и "смертность по регионам" отключим связи "название региона" и "название дороги", чтобы при выборе данных через селектор не менялись общие данные по регионам. Аналогично у чартов "наиболее опасные ДТП" и "наиболее смертельные ДТП" отключим  связь "причина ДТП", чтобы не отображать только одну причину на графике. Получаем такой дашборд.
 
