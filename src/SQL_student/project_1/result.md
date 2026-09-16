@@ -20,7 +20,7 @@
    1. между таблицами client и buy связь "один ко многим" так как один клиент может купить много товаров
    2. между таблицами "item" и "buy" связь "один ко многим" так как один товар может быть куплен много раз
 
-<img width="975" height="936" alt="image" src="https://github.com/user-attachments/assets/30303eb3-2724-447a-a6e4-6efe195ef184" />
+![Diagram](diagram.png)
 
 
 
